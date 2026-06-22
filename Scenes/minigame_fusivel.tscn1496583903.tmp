@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dqyuxwupadtt5"]
 
-[ext_resource type="Script" uid="uid://bj6k6lxtcmh4i" path="res://Scripts/minigame_fusivel.gd" id="1_c00lf"]
 [ext_resource type="Texture2D" uid="uid://cll5uetiq2bf" path="res://Assets/Placeholders/Pixel_Mart/potatochip_blue.png" id="1_q1q3t"]
 [ext_resource type="Script" uid="uid://d2tkg4t8adcwv" path="res://Scripts/minigame/icon.gd" id="2_2s2ox"]
 [ext_resource type="Script" uid="uid://bv4vakj2shjey" path="res://Scripts/minigame/slot.gd" id="3_2s2ox"]
@@ -41,39 +40,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_c00lf")
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1210447070]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.38431373)
-
-[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2090946611]
-custom_minimum_size = Vector2(700, 400)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -469.0
-offset_top = -281.0
-offset_right = 469.0
-offset_bottom = 281.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="primeiro" type="TextureRect" parent="." unique_id=1451880586]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 59.0
-offset_right = 260.0
-offset_bottom = 150.0
+offset_right = 91.0
+offset_bottom = 91.0
 texture = SubResource("AtlasTexture_xlyg8")
 script = ExtResource("2_2s2ox")
 
@@ -84,10 +56,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 309.0
-offset_top = 59.0
-offset_right = 400.0
-offset_bottom = 150.0
+offset_left = -45.5
+offset_right = 45.5
+offset_bottom = 91.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_7a30r")
 script = ExtResource("3_2s2ox")
@@ -95,10 +66,10 @@ script = ExtResource("3_2s2ox")
 [node name="segundo" type="TextureRect" parent="." unique_id=1522550570]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 187.0
-offset_right = 260.0
-offset_bottom = 278.0
+offset_left = 1.0
+offset_top = 142.0
+offset_right = 92.0
+offset_bottom = 233.0
 texture = SubResource("AtlasTexture_e6764")
 script = ExtResource("2_2s2ox")
 powerup = 1
@@ -110,10 +81,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 309.0
-offset_top = 187.0
-offset_right = 400.0
-offset_bottom = 278.0
+offset_left = -44.5
+offset_top = 142.0
+offset_right = 46.5
+offset_bottom = 233.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_c00lf")
 script = ExtResource("3_2s2ox")
@@ -122,10 +93,10 @@ powerup = 1
 [node name="terceiro" type="TextureRect" parent="." unique_id=1161327977]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 333.0
-offset_right = 260.0
-offset_bottom = 424.0
+offset_left = 1.0
+offset_top = 274.0
+offset_right = 92.0
+offset_bottom = 365.0
 texture = SubResource("AtlasTexture_w401n")
 script = ExtResource("2_2s2ox")
 powerup = 2
@@ -137,10 +108,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 309.0
-offset_top = 333.0
-offset_right = 400.0
-offset_bottom = 424.0
+offset_left = -44.5
+offset_top = 274.0
+offset_right = 46.5
+offset_bottom = 365.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_bk8df")
 script = ExtResource("3_2s2ox")
@@ -149,10 +120,10 @@ powerup = 2
 [node name="quarto" type="TextureRect" parent="." unique_id=121822175]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 475.0
-offset_right = 260.0
-offset_bottom = 566.0
+offset_left = 2.0
+offset_top = 416.0
+offset_right = 93.0
+offset_bottom = 507.0
 texture = SubResource("AtlasTexture_15hsn")
 script = ExtResource("2_2s2ox")
 powerup = 3
@@ -164,10 +135,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 309.0
-offset_top = 475.0
-offset_right = 400.0
-offset_bottom = 566.0
+offset_left = -43.5
+offset_top = 416.0
+offset_right = 47.5
+offset_bottom = 507.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_c00lf")
 script = ExtResource("3_2s2ox")

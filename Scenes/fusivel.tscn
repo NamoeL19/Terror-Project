@@ -128,7 +128,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3jf51"]
-size = Vector3(2.9804688, 3.5332031, 6.7628784)
+size = Vector3(2.9804688, 3.5332031, 2.3694305)
 
 [node name="fusivel" type="Node3D" unique_id=12267193]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -155,10 +155,12 @@ mesh = SubResource("ArrayMesh_oltnw")
 libraries/ = SubResource("AnimationLibrary_oaujg")
 
 [node name="Area3D" type="Area3D" parent="." unique_id=11925833]
+transform = Transform3D(1, 0, 0, 0, 0.99999577, 0.0029146958, 0, -0.0029146958, 0.99999577, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1005600551]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7729492, -2.9811707)
+transform = Transform3D(0.99999964, 0.00016724538, 0.0008356065, -0.0001655841, 0.99999803, -0.001970436, -0.0008359372, 0.0019702958, 0.9999977, 0, 1.7729492, -0.7844471)
 shape = SubResource("BoxShape3D_3jf51")
 debug_color = Color(0.5562661, 0.56183034, 0, 0.41960785)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

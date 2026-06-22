@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cmpo40g21pqoc" path="res://Scripts/mapa_testes.gd" id="1_cb61d"]
 [ext_resource type="PackedScene" uid="uid://6xraoot4l0pp" path="res://Scenes/player.tscn" id="1_e71ch"]
+[ext_resource type="PackedScene" uid="uid://dqyuxwupadtt5" path="res://Scenes/minigame_fusivel.tscn" id="2_h0ev1"]
+[ext_resource type="FontFile" uid="uid://cc1unuekv7yhs" path="res://Assets/font/HelpMe.ttf" id="3_n5b4w"]
 [ext_resource type="PackedScene" uid="uid://cqx6b5e7wvd51" path="res://Scenes/enemy.tscn" id="3_ralbm"]
 [ext_resource type="PackedScene" uid="uid://cj4osyd6075b6" path="res://Scenes/fusivel.tscn" id="4_cqxq0"]
 
@@ -16,6 +18,15 @@ sky_material = SubResource("ProceduralSkyMaterial_e71ch")
 background_mode = 2
 sky = SubResource("Sky_cb61d")
 tonemap_mode = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_glshf"]
+font = ExtResource("3_n5b4w")
+font_size = 36
+font_color = Color(1.2161634, 0, 0.078939006, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(-2.53, 2.935)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_e71ch"]
 vertices = PackedVector3Array(-12.9746, 0.48798454, -11.2246, -12.4746, 0.48798454, -11.2246, -12.2246, 0.48798454, -11.9746, -12.9746, 0.48798454, -12.9746, 12.0254, 0.48798454, 11.5254, 13.0254, 0.48798454, 13.0254, 13.0254, 0.48798454, -12.9746, 12.0254, 0.48798454, -11.7246, 1.5254002, 0.48798454, 11.5254, 1.5254002, 0.48798454, 13.0254, -12.2246, 0.48798454, -10.4746, -12.9746, 0.48798454, -7.9746, -11.4746, 0.48798454, -7.7246, 1.5254002, 0.48798454, -7.7246, 1.7754002, 0.48798454, -10.4746, 3.0254002, 0.48798454, -7.7246, 3.2754002, 0.48798454, -6.7246, 6.0254, 0.48798454, -6.7246, 6.2754, 0.48798454, -7.7246, 10.2754, 0.48798454, -10.4746, 10.2754, 0.48798454, -7.7246, -11.9746, 0.48798454, -7.4746, -1.7245998, 0.48798454, 13.0254, -1.7245998, 0.48798454, 11.5254, -11.7246, 0.48798454, 11.2754, -12.9746, 0.48798454, 13.0254, 3.0254002, 0.48798454, -5.9746, 6.0254, 0.48798454, -3.2245998, -5.4746, 0.48798454, -3.2245998, -5.7246, 0.48798454, -5.9746, -6.4746, 0.48798454, 5.7754, -6.4746, 0.48798454, 2.7754002, -7.2246, 0.48798454, 2.5254002, -7.4746, 0.48798454, 6.0254, -7.2246, 0.48798454, -2.9745998, -10.2246, 0.48798454, -5.9746, -10.2246, 0.48798454, 10.0254, -7.4746, 0.48798454, 10.0254, 5.2754, 0.48798454, -1.7245998, 5.2754, 0.48798454, 1.2754002, 7.5254, 0.48798454, 1.5254002, 7.5254, 0.48798454, -1.9745998, 10.2754, 0.48798454, 5.2754, 10.2754, 0.48798454, -5.9746, 7.5254, 0.48798454, 5.0254, 7.5254, 0.48798454, -5.9746, -5.7246, 0.48798454, 2.0254002, -2.9745998, 0.48798454, 2.2754002, -2.7245998, 0.48798454, 1.2754002, -5.7246, 0.48798454, -1.7245998, -5.9746, 0.48798454, 2.7754002, -5.9746, 0.48798454, 6.0254, -5.9746, 0.48798454, 10.0254, -2.9745998, 0.48798454, 10.0254, -1.2245998, 0.48798454, 11.2754, 2.7754002, 0.48798454, 5.7754, 3.0254002, 0.48798454, 6.2754, 5.7754, 0.48798454, 6.2754, 5.7754, 0.48798454, 2.7754002, -1.2245998, 0.48798454, 2.7754002, 1.5254002, 0.48798454, 6.0254, 6.0254, 0.48798454, 6.7754, 3.0254002, 0.48798454, 10.0254, 7.2754, 0.48798454, 6.7754, 10.2754, 0.48798454, 10.0254)
@@ -180,6 +191,23 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1307850345]
 environment = SubResource("Environment_ralbm")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=841441544]
+
+[node name="minigame_fusivel" parent="CanvasLayer" unique_id=1657595998 instance=ExtResource("2_h0ev1")]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=397583682]
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 122.0
+offset_bottom = 50.0
+text = "TESTE"
+label_settings = SubResource("LabelSettings_glshf")
+
+[node name="Caixa_fusiveis" type="Node" parent="." unique_id=839443767]
+
+[node name="fusivel" parent="Caixa_fusiveis" unique_id=12267193 instance=ExtResource("4_cqxq0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.0976636, 0.90084803, 1.5208725)
+
 [node name="player" parent="." unique_id=1542981596 groups=["player"] instance=ExtResource("1_e71ch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.08686972, 1.1421895, 10.654265)
 
@@ -214,8 +242,3 @@ mesh = SubResource("ArrayMesh_xbuaw")
 
 [node name="Enemy" parent="." unique_id=537825930 instance=ExtResource("3_ralbm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.264796, 1.718683, -8.507337)
-
-[node name="Caixa_fusiveis" type="Node" parent="." unique_id=839443767]
-
-[node name="fusivel" parent="Caixa_fusiveis" unique_id=12267193 instance=ExtResource("4_cqxq0")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1.0976636, 0.90084803, 1.5208725)
