@@ -10,6 +10,7 @@ func _ready() -> void:
 	visible = false
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	status_label.text = "Fusíveis: 0/4"
+	status_label.visible = true  # começa escondido
 
 func icone_travado() -> void:
 	icones_travados += 1

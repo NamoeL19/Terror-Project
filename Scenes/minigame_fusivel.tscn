@@ -67,7 +67,7 @@ offset_bottom = 281.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="primeiro" type="TextureRect" parent="." unique_id=1451880586]
+[node name="primeiro" type="TextureRect" parent="." unique_id=1451880586 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
 offset_left = 169.0
@@ -92,7 +92,7 @@ grow_horizontal = 2
 texture = SubResource("AtlasTexture_7a30r")
 script = ExtResource("3_2s2ox")
 
-[node name="segundo" type="TextureRect" parent="." unique_id=1522550570]
+[node name="segundo" type="TextureRect" parent="." unique_id=1522550570 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
 offset_left = 169.0
@@ -119,7 +119,7 @@ texture = SubResource("AtlasTexture_c00lf")
 script = ExtResource("3_2s2ox")
 powerup = 1
 
-[node name="terceiro" type="TextureRect" parent="." unique_id=1161327977]
+[node name="terceiro" type="TextureRect" parent="." unique_id=1161327977 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
 offset_left = 169.0
@@ -146,7 +146,7 @@ texture = SubResource("AtlasTexture_bk8df")
 script = ExtResource("3_2s2ox")
 powerup = 2
 
-[node name="quarto" type="TextureRect" parent="." unique_id=121822175]
+[node name="quarto" type="TextureRect" parent="." unique_id=121822175 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
 offset_left = 169.0
