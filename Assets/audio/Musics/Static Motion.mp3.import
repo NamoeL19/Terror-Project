@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsvjf74r8hh7x"
+path="res://.godot/imported/Static Motion.mp3-811b527817a8c5921ed4ac6e2a02dc6e.mp3str"
+
+[deps]
+
+source_file="res://Assets/audio/Musics/Static Motion.mp3"
+dest_files=["res://.godot/imported/Static Motion.mp3-811b527817a8c5921ed4ac6e2a02dc6e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

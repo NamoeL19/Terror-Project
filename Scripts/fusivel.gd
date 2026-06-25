@@ -21,8 +21,7 @@ func _process(delta: float) -> void:
 		abrir_minigame()
 
 func abrir_minigame() -> void:
-	minigame.visible = true
-	minigame.fusivel_atual = self # passa referência dessa caixa para o minigame
+	minigame.fusivel_atual = self
+	minigame.abrir_minigame()  # agora chama a função que já reseta e abre
 	get_tree().paused = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	text.visible = false

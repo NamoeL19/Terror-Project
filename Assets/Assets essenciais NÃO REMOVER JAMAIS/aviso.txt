@@ -1,0 +1,3 @@
+Todas os assets presentes aqui nessa pasta, não podem ser removidas por hipótese alguma.
+
+Muito desses assets estão ligados diretamente com o funcionamento do jogo base, e se for removido, o jogo não funciona direito

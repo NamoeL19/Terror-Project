@@ -3,10 +3,12 @@
 [ext_resource type="Script" uid="uid://bj6k6lxtcmh4i" path="res://Scripts/minigame_fusivel.gd" id="1_c00lf"]
 [ext_resource type="Texture2D" uid="uid://cll5uetiq2bf" path="res://Assets/Placeholders/Pixel_Mart/potatochip_blue.png" id="1_q1q3t"]
 [ext_resource type="Script" uid="uid://d2tkg4t8adcwv" path="res://Scripts/minigame/icon.gd" id="2_2s2ox"]
+[ext_resource type="Script" uid="uid://cmdw03oj2vaes" path="res://Scripts/linha_energia_fusivel.gd" id="2_w401n"]
 [ext_resource type="Script" uid="uid://bv4vakj2shjey" path="res://Scripts/minigame/slot.gd" id="3_2s2ox"]
 [ext_resource type="Texture2D" uid="uid://b5p8fkrgup35i" path="res://Assets/Placeholders/Pixel_Mart/milk_gallon.png" id="3_7a30r"]
 [ext_resource type="Texture2D" uid="uid://chktw2cwm2q1c" path="res://Assets/Placeholders/Pixel_Mart/paper_bag.png" id="5_wqwbg"]
 [ext_resource type="Texture2D" uid="uid://3xprpb4wehlu" path="res://Assets/Placeholders/Pixel_Mart/olive_oil.png" id="6_66bru"]
+[ext_resource type="Texture2D" uid="uid://dn38djm87618r" path="res://Assets/Placeholders/Pixel_Mart/bathroom_cleaner.png" id="7_cyvuf"]
 [ext_resource type="Texture2D" uid="uid://d1eqy6te2d788" path="res://Assets/Placeholders/Pixel_Mart/plain_yogurt.png" id="7_e6764"]
 [ext_resource type="Texture2D" uid="uid://pcqgo2de3ojq" path="res://Assets/Placeholders/Pixel_Mart/milk_pack.png" id="8_c00lf"]
 [ext_resource type="Texture2D" uid="uid://lcebg7s2ecqq" path="res://Assets/Placeholders/Pixel_Mart/potatochip_yellow.png" id="9_cyvuf"]
@@ -22,8 +24,8 @@ atlas = ExtResource("3_7a30r")
 [sub_resource type="AtlasTexture" id="AtlasTexture_e6764"]
 atlas = ExtResource("5_wqwbg")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c00lf"]
-atlas = ExtResource("6_66bru")
+[sub_resource type="AtlasTexture" id="AtlasTexture_idou1"]
+atlas = ExtResource("7_cyvuf")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w401n"]
 atlas = ExtResource("7_e6764")
@@ -34,6 +36,9 @@ atlas = ExtResource("8_c00lf")
 [sub_resource type="AtlasTexture" id="AtlasTexture_15hsn"]
 atlas = ExtResource("9_cyvuf")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_c00lf"]
+atlas = ExtResource("6_66bru")
+
 [node name="minigame_fusivel" type="Control" unique_id=1657595998]
 layout_mode = 3
 anchors_preset = 15
@@ -42,6 +47,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c00lf")
+
+[node name="Linhas" type="Node" parent="." unique_id=499162776]
+
+[node name="LinhaFusiveis" type="Line2D" parent="Linhas" unique_id=519973609]
+width = 5.0
+script = ExtResource("2_w401n")
+
+[node name="LinhaFusiveis2" type="Line2D" parent="Linhas" unique_id=718515544]
+width = 5.0
+script = ExtResource("2_w401n")
+cor_linha = 1
+
+[node name="LinhaFusiveis3" type="Line2D" parent="Linhas" unique_id=1183963943]
+width = 5.0
+script = ExtResource("2_w401n")
+cor_linha = 2
+
+[node name="LinhaFusiveis4" type="Line2D" parent="Linhas" unique_id=1688002855]
+points = PackedVector2Array(677, -85)
+width = 5.0
+script = ExtResource("2_w401n")
+cor_linha = 3
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1210447070]
 layout_mode = 1
@@ -70,10 +97,10 @@ grow_vertical = 2
 [node name="primeiro" type="TextureRect" parent="." unique_id=1451880586 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 59.0
-offset_right = 260.0
-offset_bottom = 150.0
+offset_left = 215.0
+offset_top = 117.0
+offset_right = 306.0
+offset_bottom = 208.0
 texture = SubResource("AtlasTexture_xlyg8")
 script = ExtResource("2_2s2ox")
 
@@ -84,10 +111,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 309.0
-offset_top = 59.0
-offset_right = 400.0
-offset_bottom = 150.0
+offset_left = 312.0
+offset_top = 117.0
+offset_right = 403.0
+offset_bottom = 208.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_7a30r")
 script = ExtResource("3_2s2ox")
@@ -95,10 +122,10 @@ script = ExtResource("3_2s2ox")
 [node name="segundo" type="TextureRect" parent="." unique_id=1522550570 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 187.0
-offset_right = 260.0
-offset_bottom = 278.0
+offset_left = 215.0
+offset_top = 234.0
+offset_right = 306.0
+offset_bottom = 325.0
 texture = SubResource("AtlasTexture_e6764")
 script = ExtResource("2_2s2ox")
 powerup = 1
@@ -111,21 +138,22 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 309.0
-offset_top = 187.0
+offset_top = 234.0
 offset_right = 400.0
-offset_bottom = 278.0
+offset_bottom = 325.0
 grow_horizontal = 2
-texture = SubResource("AtlasTexture_c00lf")
+texture = SubResource("AtlasTexture_idou1")
 script = ExtResource("3_2s2ox")
 powerup = 1
+cor_linha = 1
 
 [node name="terceiro" type="TextureRect" parent="." unique_id=1161327977 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 333.0
-offset_right = 260.0
-offset_bottom = 424.0
+offset_left = 213.0
+offset_top = 367.0
+offset_right = 304.0
+offset_bottom = 458.0
 texture = SubResource("AtlasTexture_w401n")
 script = ExtResource("2_2s2ox")
 powerup = 2
@@ -137,22 +165,23 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 309.0
-offset_top = 333.0
-offset_right = 400.0
-offset_bottom = 424.0
+offset_left = 312.0
+offset_top = 367.0
+offset_right = 403.0
+offset_bottom = 458.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_bk8df")
 script = ExtResource("3_2s2ox")
 powerup = 2
+cor_linha = 2
 
 [node name="quarto" type="TextureRect" parent="." unique_id=121822175 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 169.0
-offset_top = 475.0
-offset_right = 260.0
-offset_bottom = 566.0
+offset_left = 215.0
+offset_top = 497.0
+offset_right = 306.0
+offset_bottom = 588.0
 texture = SubResource("AtlasTexture_15hsn")
 script = ExtResource("2_2s2ox")
 powerup = 3
@@ -164,11 +193,23 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 309.0
-offset_top = 475.0
-offset_right = 400.0
-offset_bottom = 566.0
+offset_left = 312.0
+offset_top = 497.0
+offset_right = 403.0
+offset_bottom = 588.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_c00lf")
 script = ExtResource("3_2s2ox")
 powerup = 3
+cor_linha = 3
+
+[node name="Button" type="Button" parent="." unique_id=21519418]
+layout_mode = 0
+offset_left = 1157.0
+offset_top = 28.0
+offset_right = 1258.0
+offset_bottom = 83.0
+text = "SAIR"
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

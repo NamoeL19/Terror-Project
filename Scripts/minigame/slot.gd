@@ -1,6 +1,10 @@
 extends TextureRect
 
 @export_enum("Primeiro", "Segundo", "Terceiro", "Quarto") var powerup = 0
+@export_enum("Vermelho", "Azul", "Verde", "Amarelo") var cor_linha: int = 0
+
+# ativa ou desativa as linhas aqui
+const LINHAS_ATIVAS := true
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	if data[1] == powerup:
@@ -8,8 +12,20 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return false
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
-	data[0].get_parent().remove_child(data[0])
-	add_child(data[0])
-	data[0].global_position = global_position
-	data[0].locked = true
+	var icone = data[0]
+	
+	# guarda posição original do ícone antes de mover
+	var origem = icone.global_position + icone.size / 2
+	
+	icone.get_parent().remove_child(icone)
+	add_child(icone)
+	icone.global_position = global_position
+	icone.locked = true
+	
+	# desenha a linha se ativo
+	if LINHAS_ATIVAS:
+		var destino = global_position + size / 2
+		var minigame = get_tree().root.get_node("MapaTestes/CanvasLayer/minigame_fusivel")
+		minigame.desenhar_linha(origem, destino, cor_linha)
+	
 	get_tree().root.get_node("MapaTestes/CanvasLayer/minigame_fusivel").icone_travado()
