@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Static Motion.mp3-811b527817a8c5921ed4ac6e2a0
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
