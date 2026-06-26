@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bh7r6autl1t6c" path="res://Scripts/character_body_3d.gd" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://e8b6sybv3gsj" path="res://Assets/Assets essenciais NÃO REMOVER JAMAIS/rosto_protagonista.png" id="2_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://dimaevw8cwo6x" path="res://Assets/audio/SFX/correr.wav" id="3_vgqql"]
+[ext_resource type="AudioStream" uid="uid://bia5an4fwdwf0" path="res://Assets/audio/SFX/caminhar.wav" id="4_fkybt"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cvnsp"]
 
@@ -30,3 +32,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7532712, 0)
 [node name="Camera3D" type="Camera3D" parent="cabeça" unique_id=170128662]
 physics_interpolation_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.23900297)
+
+[node name="Audios" type="Node" parent="." unique_id=202671006]
+
+[node name="sprint" type="AudioStreamPlayer" parent="Audios" unique_id=571229364]
+stream = ExtResource("3_vgqql")
+
+[node name="walk" type="AudioStreamPlayer" parent="Audios" unique_id=457800377]
+stream = ExtResource("4_fkybt")

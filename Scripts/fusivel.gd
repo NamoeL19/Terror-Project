@@ -7,6 +7,7 @@ var resolvido := false
 
 @onready var minigame = $"../../CanvasLayer/minigame_fusivel"
 @onready var text = $"../../CanvasLayer/Label"
+@onready var player = $"../../player"
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
@@ -23,5 +24,5 @@ func _process(delta: float) -> void:
 func abrir_minigame() -> void:
 	minigame.fusivel_atual = self
 	minigame.abrir_minigame()  # agora chama a função que já reseta e abre
-	get_tree().paused = true
+	player.bloqueado = true
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

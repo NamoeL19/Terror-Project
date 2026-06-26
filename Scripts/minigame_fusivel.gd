@@ -5,19 +5,26 @@ var fusivel_atual = null
 var fusiveis_resolvidos := 0
 
 @onready var status_label = $"../Label"
+@onready var audio_final = $Feedback_sonoro/AudioFinal
+@onready var player = $"../../player"
+
 @onready var linhas := [
 	$Linhas/LinhaFusiveis,   # Vermelho
 	$Linhas/LinhaFusiveis2,  # Azul
 	$Linhas/LinhaFusiveis3,  # Verde
 	$Linhas/LinhaFusiveis4,  # Amarelo
 ]
-
+@onready var audios := [
+	$Feedback_sonoro/AudioAcerto1,
+	$Feedback_sonoro/AudioAcerto2,
+	$Feedback_sonoro/AudioAcerto3,
+	$Feedback_sonoro/AudioAcerto4,
+]
 var icones := []
 var posicoes_iniciais := []
 
 func _ready() -> void:
 	visible = false
-	process_mode = Node.PROCESS_MODE_ALWAYS
 	status_label.visible = true
 	status_label.text = "Fusíveis: 0/4"
 	
@@ -31,7 +38,14 @@ func abrir_minigame() -> void:
 
 func icone_travado() -> void:
 	icones_travados += 1
+	
+	audios[icones_travados - 1].play()
+	
 	if icones_travados >= 4:
+		await audios[3].finished
+		#ESPERA AI PO
+		audio_final.play()
+		await audio_final.finished
 		fechar_minigame(true) # concluiu
 
 func fechar_minigame(concluido: bool) -> void:
@@ -47,7 +61,7 @@ func fechar_minigame(concluido: bool) -> void:
 	visible = false
 	icones_travados = 0
 	fusivel_atual = null
-	get_tree().paused = false
+	player.bloqueado = false
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	status_label.visible = true
 
@@ -73,4 +87,3 @@ func desenhar_linha(origem: Vector2, destino: Vector2, indice: int) -> void:
 
 func _on_button_pressed() -> void:
 	fechar_minigame(false) # saiu sem concluir
-	

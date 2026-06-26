@@ -12,6 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://d1eqy6te2d788" path="res://Assets/Placeholders/Pixel_Mart/plain_yogurt.png" id="7_e6764"]
 [ext_resource type="Texture2D" uid="uid://pcqgo2de3ojq" path="res://Assets/Placeholders/Pixel_Mart/milk_pack.png" id="8_c00lf"]
 [ext_resource type="Texture2D" uid="uid://lcebg7s2ecqq" path="res://Assets/Placeholders/Pixel_Mart/potatochip_yellow.png" id="9_cyvuf"]
+[ext_resource type="AudioStream" uid="uid://boc2bvo8fwinn" path="res://Assets/audio/SFX/fusivel_acerto_1_corrigido.mp3" id="13_cidf5"]
+[ext_resource type="AudioStream" uid="uid://q2v135kdleir" path="res://Assets/audio/SFX/fusivel_acerto_2_corrigido.mp3" id="14_vinf3"]
+[ext_resource type="AudioStream" uid="uid://duxskntok2c7f" path="res://Assets/audio/SFX/fusivel_acerto_3_corrigido.mp3" id="15_mxxtu"]
+[ext_resource type="AudioStream" uid="uid://co2gtqxwxtkx" path="res://Assets/audio/SFX/fusivel_acerto_4_corrigido.mp3" id="16_vwwev"]
+[ext_resource type="AudioStream" uid="uid://bbmp4mq5mpshh" path="res://Assets/audio/SFX/caixa_fusivel_completa_corrigido.mp3" id="17_r1tyc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xlyg8"]
 atlas = ExtResource("1_q1q3t")
@@ -211,5 +216,22 @@ offset_right = 1258.0
 offset_bottom = 83.0
 text = "SAIR"
 icon_alignment = 1
+
+[node name="Feedback_sonoro" type="Node" parent="." unique_id=1476823560]
+
+[node name="AudioAcerto1" type="AudioStreamPlayer" parent="Feedback_sonoro" unique_id=1725504354]
+stream = ExtResource("13_cidf5")
+
+[node name="AudioAcerto2" type="AudioStreamPlayer" parent="Feedback_sonoro" unique_id=493754143]
+stream = ExtResource("14_vinf3")
+
+[node name="AudioAcerto3" type="AudioStreamPlayer" parent="Feedback_sonoro" unique_id=1082858181]
+stream = ExtResource("15_mxxtu")
+
+[node name="AudioAcerto4" type="AudioStreamPlayer" parent="Feedback_sonoro" unique_id=1432912433]
+stream = ExtResource("16_vwwev")
+
+[node name="AudioFinal" type="AudioStreamPlayer" parent="Feedback_sonoro" unique_id=782237042]
+stream = ExtResource("17_r1tyc")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
