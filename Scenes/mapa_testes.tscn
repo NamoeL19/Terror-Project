@@ -9,8 +9,9 @@
 [ext_resource type="Shader" uid="uid://bwybjqlrw5g84" path="res://Assets/shaders/effect_crt.gdshader" id="4_glshf"]
 [ext_resource type="PackedScene" uid="uid://brma3thlxxext" path="res://Scenes/jumpscare.tscn" id="4_qlhsh"]
 [ext_resource type="Material" uid="uid://bm8fsw1rawelb" path="res://Assets/textura_parede.tres" id="8_a8l3x"]
-[ext_resource type="AudioStream" uid="uid://bsvjf74r8hh7x" path="res://Assets/audio/Musics/Static Motion.mp3" id="8_g8qpe"]
 [ext_resource type="PackedScene" uid="uid://pjrqoguv1sr0" path="res://Scenes/pause_menu.tscn" id="9_f6vug"]
+[ext_resource type="AudioStream" uid="uid://both7majkjv6b" path="res://Assets/audio/Musics/Trilha_Ambiente.mp3" id="10_tgoco"]
+[ext_resource type="AudioStream" uid="uid://5lxbje2ujdcw" path="res://Assets/audio/Musics/Trilha_Chase.mp3" id="11_bejap"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e71ch"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -158,6 +159,7 @@ label_settings = SubResource("LabelSettings_glshf")
 [node name="Jumpscare" parent="CanvasLayer" unique_id=332383985 instance=ExtResource("4_qlhsh")]
 
 [node name="CRT" type="CanvasLayer" parent="." unique_id=1518473883]
+visible = false
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CRT" unique_id=1680069617]
 material = SubResource("ShaderMaterial_g8qpe")
@@ -166,18 +168,18 @@ mesh = SubResource("QuadMesh_f6vug")
 [node name="Caixa_fusiveis" type="Node" parent="." unique_id=839443767]
 
 [node name="fusivel" parent="Caixa_fusiveis" unique_id=12267193 instance=ExtResource("4_cqxq0")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -67.17433, 0.90084803, -10.090656)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -67.17433, 0.38832653, -10.090656)
 
 [node name="fusivel2" parent="Caixa_fusiveis" unique_id=803364916 instance=ExtResource("4_cqxq0")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -47.793728, 1.4889454, 3.4371624)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -47.793728, 0.6696166, 3.4371624)
 fusivel_id = 2
 
 [node name="fusivel3" parent="Caixa_fusiveis" unique_id=1940438426 instance=ExtResource("4_cqxq0")]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.451341, 0.78510165, -70.74869)
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, 8.451341, 0.27046967, -70.74869)
 fusivel_id = 3
 
 [node name="fusivel4" parent="Caixa_fusiveis" unique_id=1734656328 instance=ExtResource("4_cqxq0")]
-transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -86.860565, 0.78510165, -115.88978)
+transform = Transform3D(-0.5, 0, -4.371139e-08, 0, 0.5, 0, 4.371139e-08, 0, -0.5, -86.860565, 0.31688523, -115.88978)
 fusivel_id = 1
 
 [node name="player" parent="." unique_id=1542981596 groups=["player"] instance=ExtResource("1_e71ch")]
@@ -593,10 +595,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.952067, 1.718683, -50.749
 
 [node name="songs_audios" type="Node" parent="." unique_id=178710656]
 
-[node name="musica" type="AudioStreamPlayer" parent="songs_audios" unique_id=1628480193]
-stream = ExtResource("8_g8qpe")
-volume_db = -10.947
+[node name="normal_music" type="AudioStreamPlayer" parent="songs_audios" unique_id=1628480193]
+stream = ExtResource("10_tgoco")
+volume_db = 2.0
 autoplay = true
+
+[node name="chase_music" type="AudioStreamPlayer" parent="songs_audios" unique_id=1564611028]
+stream = ExtResource("11_bejap")
+volume_db = 1.5
 
 [node name="Control" parent="." unique_id=647461103 instance=ExtResource("9_f6vug")]
 

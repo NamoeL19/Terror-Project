@@ -50,7 +50,7 @@ func icone_travado() -> void:
 
 func fechar_minigame(concluido: bool) -> void:
 	if concluido and fusivel_atual != null:
-		fusivel_atual.resolvido = true
+		fusivel_atual.concluido() 
 		fusiveis_resolvidos += 1
 		print("Fusível ", fusivel_atual.fusivel_id + 1, " finalizado!")
 		status_label.text = "Fusíveis: " + str(fusiveis_resolvidos) + "/4"
