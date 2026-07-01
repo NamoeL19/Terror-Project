@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dt4b67h1d8qru"]
+
+[ext_resource type="Texture2D" uid="uid://e8b6sybv3gsj" path="res://Assets/Assets essenciais NÃO REMOVER JAMAIS/rosto_protagonista.png" id="1_8noof"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_r0556"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rwpdq"]
+transparency = 1
+albedo_texture = ExtResource("1_8noof")
+
+[node name="testes" type="Node3D" unique_id=956829907]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=801892687]
+transform = Transform3D(-0.8489994, 0, -0.5283939, 0, 1, 0, 0.5283939, 0, -0.8489994, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_r0556")
+surface_material_override/0 = SubResource("StandardMaterial3D_rwpdq")

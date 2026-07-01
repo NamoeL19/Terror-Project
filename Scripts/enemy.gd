@@ -6,8 +6,8 @@ extends CharacterBody3D
 @onready var normal_music = $"../songs_audios/normal_music"
 @onready var chase_music = $"../songs_audios/chase_music"
 
-const SPEED_NORMAL = 3.5
-const SPEED_PERSEGUICAO = 7.0
+const SPEED_NORMAL = 2.5
+const SPEED_PERSEGUICAO = 5.0
 const ANGULO_VISAO = 90.0
 const DISTANCIA_VISAO = 15.0
 
@@ -61,7 +61,6 @@ func _physics_process(delta: float) -> void:
 func verificar_visao() -> void:
 	var direcao_player = (player.global_transform.origin - global_transform.origin)
 	var distancia = direcao_player.length()
-	print("distancia: ", distancia)
 
 	# verifica distância
 	if distancia > DISTANCIA_VISAO:
@@ -72,7 +71,6 @@ func verificar_visao() -> void:
 	direcao_player = direcao_player.normalized()
 	var direcao_frente = -global_transform.basis.z
 	var angulo = rad_to_deg(direcao_frente.angle_to(direcao_player))
-	print("angulo: ", angulo)
 
 	if angulo > ANGULO_VISAO:
 		sair_perseguicao()
@@ -81,11 +79,9 @@ func verificar_visao() -> void:
 	# verifica linha de visão com raycast
 	raycast.target_position = to_local(player.global_transform.origin)
 	raycast.force_raycast_update()
-	print("raycast colidiu: ", raycast.is_colliding())
 	
 	if raycast.is_colliding():
 		var colidiu = raycast.get_collider()
-		print("colidiu com: ", raycast.get_collider().name)
 		if colidiu.is_in_group("player"):
 			entrar_perseguicao()
 		else:

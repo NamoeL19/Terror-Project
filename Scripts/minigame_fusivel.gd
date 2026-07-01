@@ -7,6 +7,7 @@ var fusiveis_resolvidos := 0
 @onready var status_label = $"../Label"
 @onready var audio_final = $Feedback_sonoro/AudioFinal
 @onready var player = $"../../player"
+@onready var mapa = $"../.."
 
 @onready var linhas := [
 	$Linhas/LinhaFusiveis,   # Vermelho
@@ -55,6 +56,10 @@ func fechar_minigame(concluido: bool) -> void:
 		print("Fusível ", fusivel_atual.fusivel_id + 1, " finalizado!")
 		status_label.text = "Fusíveis: " + str(fusiveis_resolvidos) + "/4"
 	
+	if fusiveis_resolvidos >= 4:
+		print("PORTA ABRIU VAMBORA")
+		mapa.destrancar_porta()
+	
 	for l in linhas:
 		l.limpar()
 	
@@ -66,15 +71,14 @@ func fechar_minigame(concluido: bool) -> void:
 	status_label.visible = true
 
 func resetar_minigame() -> void:
+	print("RESETANDO MINIGAME")
 	# limpa linhas ao resetar também
 	for l in linhas:
 		l.limpar()
 	
 	for icone in icones:
-		if icone.get_parent() != self:
-			icone.get_parent().remove_child(icone)
-			add_child(icone)
 		icone.locked = false
+		icone.visible = true
 	
 	var posicoes_embaralhadas = posicoes_iniciais.duplicate()
 	posicoes_embaralhadas.shuffle()

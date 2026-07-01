@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jlrym8o00p6x"
-path.s3tc="res://.godot/imported/Bottom_Right_Corner_Wall.png-2192abcebc827e5fa4a4f43bf513083f.s3tc.ctex"
+uid="uid://cdcl45k351rtj"
+path.s3tc="res://.godot/imported/paper_texture.png-d0e49c605123ce99c36ad5e53cf749a2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Assets Terror/Top_Down_Walls/Bottom_Right_Corner_Wall.png"
-dest_files=["res://.godot/imported/Bottom_Right_Corner_Wall.png-2192abcebc827e5fa4a4f43bf513083f.s3tc.ctex"]
+source_file="res://Assets/paper_texture.png"
+dest_files=["res://.godot/imported/paper_texture.png-d0e49c605123ce99c36ad5e53cf749a2.s3tc.ctex"]
 
 [params]
 

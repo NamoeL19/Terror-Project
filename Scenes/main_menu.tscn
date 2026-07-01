@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://oy80hjxrjau1"]
+
+[ext_resource type="FontFile" uid="uid://vbhfe3p2gt4g" path="res://Assets/font/Unquiet Spirits.ttf" id="1_28flt"]
+[ext_resource type="Script" uid="uid://cvyy70uei4tud" path="res://Scripts/main_menu.gd" id="1_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://y0p6n08iu5jv" path="res://Assets/Placeholders/telainicial.jpeg" id="2_n45e2"]
+[ext_resource type="FontFile" uid="uid://cc1unuekv7yhs" path="res://Assets/font/HelpMe.ttf" id="4_opfnp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_48xlc"]
+font = ExtResource("1_28flt")
+font_size = 100
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(-10.005, 10.415)
+
+[node name="MainMenu" type="Control" unique_id=1352820595]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ce3w2")
+
+[node name="Telainicial" type="Sprite2D" parent="." unique_id=429963020]
+position = Vector2(640, 361)
+texture = ExtResource("2_n45e2")
+
+[node name="Label" type="Label" parent="." unique_id=1540320584]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -570.0
+offset_top = 157.0
+offset_right = -64.0
+offset_bottom = 262.0
+grow_horizontal = 2
+text = "I’m not a killer"
+label_settings = SubResource("LabelSettings_48xlc")
+horizontal_alignment = 1
+
+[node name="play" type="Button" parent="." unique_id=408758365]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 322.0
+offset_right = 399.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("4_opfnp")
+theme_override_font_sizes/font_size = 40
+text = "JOGAR"
+
+[node name="creditos" type="Button" parent="." unique_id=2037711673]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 398.0
+offset_right = 431.0
+offset_bottom = 459.0
+theme_override_fonts/font = ExtResource("4_opfnp")
+theme_override_font_sizes/font_size = 40
+text = "creditos"
+
+[node name="sair" type="Button" parent="." unique_id=1430147804]
+layout_mode = 0
+offset_left = 1122.0
+offset_top = 642.0
+offset_right = 1259.0
+offset_bottom = 694.0
+theme_override_fonts/font = ExtResource("4_opfnp")
+theme_override_font_sizes/font_size = 38
+text = "SAIR"
+
+[connection signal="pressed" from="play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="sair" to="." method="_on_sair_pressed"]

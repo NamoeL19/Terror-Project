@@ -13,19 +13,15 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var icone = data[0]
-	
-	# guarda posição original do ícone antes de mover
+
 	var origem = icone.global_position + icone.size / 2
-	
-	icone.get_parent().remove_child(icone)
-	add_child(icone)
-	icone.global_position = global_position
+
 	icone.locked = true
-	
-	# desenha a linha se ativo
+	icone.visible = false
+
 	if LINHAS_ATIVAS:
 		var destino = global_position + size / 2
 		var minigame = get_tree().root.get_node("MapaTestes/CanvasLayer/minigame_fusivel")
 		minigame.desenhar_linha(origem, destino, cor_linha)
-	
+
 	get_tree().root.get_node("MapaTestes/CanvasLayer/minigame_fusivel").icone_travado()

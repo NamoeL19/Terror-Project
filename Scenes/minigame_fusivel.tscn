@@ -96,28 +96,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c00lf")
 
-[node name="Linhas" type="Node" parent="." unique_id=499162776]
-
-[node name="LinhaFusiveis" type="Line2D" parent="Linhas" unique_id=519973609]
-width = 5.0
-script = ExtResource("2_w401n")
-
-[node name="LinhaFusiveis2" type="Line2D" parent="Linhas" unique_id=718515544]
-width = 5.0
-script = ExtResource("2_w401n")
-cor_linha = 1
-
-[node name="LinhaFusiveis3" type="Line2D" parent="Linhas" unique_id=1183963943]
-width = 5.0
-script = ExtResource("2_w401n")
-cor_linha = 2
-
-[node name="LinhaFusiveis4" type="Line2D" parent="Linhas" unique_id=1688002855]
-points = PackedVector2Array(677, -85)
-width = 5.0
-script = ExtResource("2_w401n")
-cor_linha = 3
-
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1210447070]
 layout_mode = 1
 anchors_preset = 15
@@ -271,6 +249,28 @@ offset_right = 1258.0
 offset_bottom = 83.0
 text = "SAIR"
 icon_alignment = 1
+
+[node name="Linhas" type="Node" parent="." unique_id=499162776]
+
+[node name="LinhaFusiveis" type="Line2D" parent="Linhas" unique_id=519973609]
+width = 5.0
+script = ExtResource("2_w401n")
+
+[node name="LinhaFusiveis2" type="Line2D" parent="Linhas" unique_id=718515544]
+width = 5.0
+script = ExtResource("2_w401n")
+cor_linha = 1
+
+[node name="LinhaFusiveis3" type="Line2D" parent="Linhas" unique_id=1183963943]
+width = 5.0
+script = ExtResource("2_w401n")
+cor_linha = 2
+
+[node name="LinhaFusiveis4" type="Line2D" parent="Linhas" unique_id=1688002855]
+points = PackedVector2Array(677, -85)
+width = 5.0
+script = ExtResource("2_w401n")
+cor_linha = 3
 
 [node name="Feedback_sonoro" type="Node" parent="." unique_id=1476823560]
 

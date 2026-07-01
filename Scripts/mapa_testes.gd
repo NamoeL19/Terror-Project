@@ -4,6 +4,8 @@ extends Node3D
 @onready var minigame = $CanvasLayer/minigame_fusivel
 @onready var pause_menu = $Control/PauseMenu
 @onready var fade = $CanvasLayer/Jumpscare/ColorRect
+@onready var porta = $labiritinho_placeholder/NavigationRegion3D/csgs/porta
+@export var sound_portao: AudioStreamPlayer3D
 
 func _ready() -> void:
 	pause_menu.visible = false
@@ -27,7 +29,7 @@ func _input(event):
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("player"):
 		if minigame.fusiveis_resolvidos >= 4:
-			get_tree().change_scene_to_file("res://Scenes/final_mega_provisorio.tscn")
+			get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
 		else:
 			print("não finalizou o jogo ainda amigão, termina isso de uma vez.")
 
@@ -39,3 +41,12 @@ func toggle_paused():
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	else:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
+func destrancar_porta() -> void:
+	if sound_portao:
+		sound_portao.play()
+	var tween = create_tween()
+	tween.tween_property(porta, "scale", Vector3.ZERO, 1.0)
+	await tween.finished
+	porta.visible = false
+	porta.queue_free()
