@@ -12,7 +12,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	set_drag_preview(preview)
 	return [self, powerup]
 
-func _notification(notification_type) -> void:
-	match notification_type:
-		NOTIFICATION_DRAG_END:
-			visible = true
+#func _notification(notification_type) -> void:
+	#match notification_type:
+		#NOTIFICATION_DRAG_END:
+			#visible = true

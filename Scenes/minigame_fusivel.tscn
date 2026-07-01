@@ -1,17 +1,10 @@
 [gd_scene format=3 uid="uid://dqyuxwupadtt5"]
 
 [ext_resource type="Script" uid="uid://bj6k6lxtcmh4i" path="res://Scripts/minigame_fusivel.gd" id="1_c00lf"]
-[ext_resource type="Texture2D" uid="uid://cll5uetiq2bf" path="res://Assets/Placeholders/Pixel_Mart/potatochip_blue.png" id="1_q1q3t"]
 [ext_resource type="Script" uid="uid://d2tkg4t8adcwv" path="res://Scripts/minigame/icon.gd" id="2_2s2ox"]
 [ext_resource type="Script" uid="uid://cmdw03oj2vaes" path="res://Scripts/linha_energia_fusivel.gd" id="2_w401n"]
 [ext_resource type="Script" uid="uid://bv4vakj2shjey" path="res://Scripts/minigame/slot.gd" id="3_2s2ox"]
-[ext_resource type="Texture2D" uid="uid://b5p8fkrgup35i" path="res://Assets/Placeholders/Pixel_Mart/milk_gallon.png" id="3_7a30r"]
-[ext_resource type="Texture2D" uid="uid://chktw2cwm2q1c" path="res://Assets/Placeholders/Pixel_Mart/paper_bag.png" id="5_wqwbg"]
-[ext_resource type="Texture2D" uid="uid://3xprpb4wehlu" path="res://Assets/Placeholders/Pixel_Mart/olive_oil.png" id="6_66bru"]
-[ext_resource type="Texture2D" uid="uid://dn38djm87618r" path="res://Assets/Placeholders/Pixel_Mart/bathroom_cleaner.png" id="7_cyvuf"]
-[ext_resource type="Texture2D" uid="uid://d1eqy6te2d788" path="res://Assets/Placeholders/Pixel_Mart/plain_yogurt.png" id="7_e6764"]
-[ext_resource type="Texture2D" uid="uid://pcqgo2de3ojq" path="res://Assets/Placeholders/Pixel_Mart/milk_pack.png" id="8_c00lf"]
-[ext_resource type="Texture2D" uid="uid://lcebg7s2ecqq" path="res://Assets/Placeholders/Pixel_Mart/potatochip_yellow.png" id="9_cyvuf"]
+[ext_resource type="Texture2D" uid="uid://dnquswiifjxgt" path="res://Assets/Placeholders/fios_minigame.png" id="3_cidf5"]
 [ext_resource type="AudioStream" uid="uid://boc2bvo8fwinn" path="res://Assets/audio/SFX/fusivel_acerto_1_corrigido.mp3" id="13_cidf5"]
 [ext_resource type="AudioStream" uid="uid://q2v135kdleir" path="res://Assets/audio/SFX/fusivel_acerto_2_corrigido.mp3" id="14_vinf3"]
 [ext_resource type="AudioStream" uid="uid://duxskntok2c7f" path="res://Assets/audio/SFX/fusivel_acerto_3_corrigido.mp3" id="15_mxxtu"]
@@ -19,30 +12,80 @@
 [ext_resource type="AudioStream" uid="uid://bbmp4mq5mpshh" path="res://Assets/audio/SFX/caixa_fusivel_completa_corrigido.mp3" id="17_r1tyc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xlyg8"]
-atlas = ExtResource("1_q1q3t")
+atlas = ExtResource("3_cidf5")
+region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_w43ho"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c00lf"]
+load_path = "res://.godot/imported/fios_minigame.png-c50ce957540479947314d686303fcda7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cyvuf"]
+atlas = SubResource("CompressedTexture2D_c00lf")
+region = Rect2(0, 0, 64, 64)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_7a30r"]
-atlas = ExtResource("3_7a30r")
+atlas = SubResource("AtlasTexture_cyvuf")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e6764"]
-atlas = ExtResource("5_wqwbg")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_idou1"]
-atlas = ExtResource("7_cyvuf")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w401n"]
-atlas = ExtResource("7_e6764")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w401n"]
+load_path = "res://.godot/imported/fios_minigame.png-c50ce957540479947314d686303fcda7.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bk8df"]
-atlas = ExtResource("8_c00lf")
+atlas = SubResource("CompressedTexture2D_w401n")
+region = Rect2(0, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_15hsn"]
-atlas = ExtResource("9_cyvuf")
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6764"]
+atlas = SubResource("AtlasTexture_bk8df")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c00lf"]
-atlas = ExtResource("6_66bru")
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_15hsn"]
+load_path = "res://.godot/imported/fios_minigame.png-c50ce957540479947314d686303fcda7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idou1"]
+atlas = SubResource("CompressedTexture2D_15hsn")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgcr3"]
+atlas = SubResource("AtlasTexture_idou1")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cidf5"]
+load_path = "res://.godot/imported/fios_minigame.png-c50ce957540479947314d686303fcda7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vinf3"]
+atlas = SubResource("CompressedTexture2D_cidf5")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxxtu"]
+atlas = SubResource("AtlasTexture_vinf3")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vwwev"]
+load_path = "res://.godot/imported/fios_minigame.png-c50ce957540479947314d686303fcda7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1tyc"]
+atlas = SubResource("CompressedTexture2D_vwwev")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqpqh"]
+atlas = SubResource("AtlasTexture_r1tyc")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_siw48"]
+load_path = "res://.godot/imported/fios_minigame.png-c50ce957540479947314d686303fcda7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bm5q1"]
+atlas = SubResource("CompressedTexture2D_siw48")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2y8fk"]
+atlas = SubResource("AtlasTexture_bm5q1")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fjd6w"]
+load_path = "res://.godot/imported/fios_minigame.png-c50ce957540479947314d686303fcda7.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npivu"]
+atlas = SubResource("CompressedTexture2D_fjd6w")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjxsl"]
+atlas = SubResource("AtlasTexture_npivu")
 
 [node name="minigame_fusivel" type="Control" unique_id=1657595998]
 layout_mode = 3
@@ -102,11 +145,12 @@ grow_vertical = 2
 [node name="primeiro" type="TextureRect" parent="." unique_id=1451880586 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 215.0
+offset_left = 171.0
 offset_top = 117.0
 offset_right = 306.0
-offset_bottom = 208.0
+offset_bottom = 254.0
 texture = SubResource("AtlasTexture_xlyg8")
+stretch_mode = 6
 script = ExtResource("2_2s2ox")
 
 [node name="slot" type="TextureRect" parent="." unique_id=1771300236]
@@ -118,20 +162,23 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 312.0
 offset_top = 117.0
-offset_right = 403.0
+offset_right = 470.0
 offset_bottom = 208.0
 grow_horizontal = 2
 texture = SubResource("AtlasTexture_7a30r")
+stretch_mode = 6
+flip_h = true
 script = ExtResource("3_2s2ox")
 
 [node name="segundo" type="TextureRect" parent="." unique_id=1522550570 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 215.0
+offset_left = 170.0
 offset_top = 234.0
 offset_right = 306.0
-offset_bottom = 325.0
+offset_bottom = 371.0
 texture = SubResource("AtlasTexture_e6764")
+expand_mode = 5
 script = ExtResource("2_2s2ox")
 powerup = 1
 
@@ -144,10 +191,12 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 309.0
 offset_top = 234.0
-offset_right = 400.0
+offset_right = 468.0
 offset_bottom = 325.0
 grow_horizontal = 2
-texture = SubResource("AtlasTexture_idou1")
+texture = SubResource("AtlasTexture_tgcr3")
+stretch_mode = 6
+flip_h = true
 script = ExtResource("3_2s2ox")
 powerup = 1
 cor_linha = 1
@@ -155,11 +204,12 @@ cor_linha = 1
 [node name="terceiro" type="TextureRect" parent="." unique_id=1161327977 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 213.0
+offset_left = 171.0
 offset_top = 367.0
 offset_right = 304.0
 offset_bottom = 458.0
-texture = SubResource("AtlasTexture_w401n")
+texture = SubResource("AtlasTexture_mxxtu")
+stretch_mode = 6
 script = ExtResource("2_2s2ox")
 powerup = 2
 
@@ -172,10 +222,12 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 312.0
 offset_top = 367.0
-offset_right = 403.0
+offset_right = 471.0
 offset_bottom = 458.0
 grow_horizontal = 2
-texture = SubResource("AtlasTexture_bk8df")
+texture = SubResource("AtlasTexture_nqpqh")
+stretch_mode = 6
+flip_h = true
 script = ExtResource("3_2s2ox")
 powerup = 2
 cor_linha = 2
@@ -183,11 +235,12 @@ cor_linha = 2
 [node name="quarto" type="TextureRect" parent="." unique_id=121822175 groups=["icone"]]
 texture_filter = 1
 layout_mode = 1
-offset_left = 215.0
+offset_left = 171.0
 offset_top = 497.0
 offset_right = 306.0
 offset_bottom = 588.0
-texture = SubResource("AtlasTexture_15hsn")
+texture = SubResource("AtlasTexture_2y8fk")
+stretch_mode = 6
 script = ExtResource("2_2s2ox")
 powerup = 3
 
@@ -200,10 +253,12 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 312.0
 offset_top = 497.0
-offset_right = 403.0
+offset_right = 470.0
 offset_bottom = 588.0
 grow_horizontal = 2
-texture = SubResource("AtlasTexture_c00lf")
+texture = SubResource("AtlasTexture_sjxsl")
+stretch_mode = 6
+flip_h = true
 script = ExtResource("3_2s2ox")
 powerup = 3
 cor_linha = 3

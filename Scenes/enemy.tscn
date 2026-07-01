@@ -8,7 +8,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afpow"]
 transparency = 1
 shading_mode = 0
-albedo_texture = ExtResource("2_1f0kj")
+albedo_color = Color(1, 1, 1, 0)
 uv1_scale = Vector3(2.03, 1.335, 1.11)
 uv1_offset = Vector3(0.07, -0.08, 0)
 
@@ -27,3 +27,9 @@ shape = SubResource("CapsuleShape3D_287tu")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2012997926]
 debug_enabled = true
 debug_path_custom_color = Color(0.9999997, 0.09651574, 0.941458, 1)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=1047445602]
+transform = Transform3D(-2.6226832e-07, 0, 6, 0, 6, 0, -6, 0, -2.6226832e-07, 0, 0, 0)
+billboard = 2
+texture_filter = 0
+texture = ExtResource("2_1f0kj")

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bm8fsw1rawelb"]
+
+[ext_resource type="Texture2D" uid="uid://clems3f1vf8ys" path="res://Assets/Assets Terror/32x32/32x32_005.png" id="1_kdf1e"]
+
+[resource]
+albedo_texture = ExtResource("1_kdf1e")
+uv1_scale = Vector3(0.4, 0.4, 0.4)
+uv1_offset = Vector3(0, 0.365, 0)
+uv1_triplanar = true
+texture_filter = 0
